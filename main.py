@@ -12,6 +12,8 @@ from datetime import datetime, timedelta
 store = JsonStore('user_data.json')
 
 # Funciones auxiliares
+
+
 def get_user_responses():
     responses = {}
     if store.exists('conceiving'):
@@ -19,12 +21,14 @@ def get_user_responses():
     if store.exists('periods_regular'):
         responses['periods_regular'] = store.get('periods_regular')['answer']
     if store.exists('first_time_trying'):
-        responses['first_time_trying'] = store.get('first_time_trying')['answer']
+        responses['first_time_trying'] = store.get(
+            'first_time_trying')['answer']
     if store.exists('last_period_date'):
         responses['last_period_date'] = store.get('last_period_date')['answer']
     if store.exists('flow_duration'):
         responses['flow_duration'] = store.get('flow_duration')['answer']
     return responses
+
 
 def calculate_menstrual_calendar(last_period_date, flow_duration):
     try:
@@ -40,6 +44,7 @@ def calculate_menstrual_calendar(last_period_date, flow_duration):
 
     return cycles
 
+
 def calculate_days_until_next_cycle(last_period_date, flow_duration):
     try:
         start_date = datetime.strptime(last_period_date, '%d/%m/%Y')
@@ -54,40 +59,43 @@ def calculate_days_until_next_cycle(last_period_date, flow_duration):
 
     return (next_cycle_start - today).days
 
+
 # Definición de pantallas
 class DatePicker(BoxLayout):
     def __init__(self, **kwargs):
         super(DatePicker, self).__init__(**kwargs)
         self.orientation = 'horizontal'
-        
+
         self.day = Spinner(text='Day', values=[str(i) for i in range(1, 32)])
-        self.month = Spinner(text='Month', values=[str(i) for i in range(1, 13)])
+        self.month = Spinner(text='Month', values=[
+            str(i) for i in range(1, 13)])
         self.year = TextInput(text='Year', multiline=False)
-        
+
         self.add_widget(self.day)
         self.add_widget(self.month)
         self.add_widget(self.year)
-    
+
     def get_date(self):
         return f"{self.day.text}/{self.month.text}/{self.year.text}"
-    
+
+
 class MainScreen(Screen):
     def __init__(self, **kwargs):
         super(MainScreen, self).__init__(**kwargs)
         layout = BoxLayout(orientation='vertical', spacing=10)
-        
+
         # Botón para "Quedarme embarazada"
         btn_embarazada = Button(text='Quedarme embarazada')
         btn_embarazada.bind(on_press=self.change_to_quedarme_embarazada)
         layout.add_widget(btn_embarazada)
-        
+
         # Botón para "Seguimiento de embarazo"
         btn_seguimiento = Button(text='Seguimiento de embarazo')
         btn_seguimiento.bind(on_press=self.change_to_seguimiento_embarazo)
         layout.add_widget(btn_seguimiento)
-        
+
         self.add_widget(layout)
-    
+
     def change_to_quedarme_embarazada(self, instance):
         self.manager.current = 'question1'
 
@@ -101,7 +109,8 @@ class Question1(Screen):
         layout = BoxLayout(orientation='vertical')
         label = Label(text='¿Intentas concebir durante tus días más fértiles?')
         layout.add_widget(label)
-        options = ['Sí', 'No', 'No sé cuándo tienen lugar mis días más fértiles']
+        options = ['Sí', 'No',
+                   'No sé cuándo tienen lugar mis días más fértiles']
         for option in options:
             btn = Button(text=option)
             btn.bind(on_press=self.store_answer)
@@ -110,7 +119,8 @@ class Question1(Screen):
 
     def store_answer(self, instance):
         store.put('conceiving', answer=instance.text)
-        self.manager.current = 'question2' 
+        self.manager.current = 'question2'
+
 
 class Question2(Screen):
     def __init__(self, **kwargs):
@@ -132,11 +142,13 @@ class Question2(Screen):
         else:
             self.manager.current = 'question3'
 
+
 class QuestionFlowDuration(Screen):
     def __init__(self, **kwargs):
         super(QuestionFlowDuration, self).__init__(**kwargs)
         layout = BoxLayout(orientation='vertical')
-        label = Label(text='¿Cuántos días te dura aproximadamente el flujo menstrual?')
+        label = Label(
+            text='¿Cuántos días te dura aproximadamente el flujo menstrual?')
         layout.add_widget(label)
         self.flow_input = TextInput(multiline=False)
         layout.add_widget(self.flow_input)
@@ -151,13 +163,17 @@ class QuestionFlowDuration(Screen):
             store.put('flow_duration', answer=int(flow_duration))
             self.manager.current = 'question3'
 
+
 class Question3(Screen):
     def __init__(self, **kwargs):
         super(Question3, self).__init__(**kwargs)
         layout = BoxLayout(orientation='vertical')
         label = Label(text='¿Es la primera vez que intentas concebir?')
         layout.add_widget(label)
-        options = ['Sí', 'No, ya tengo hijos', 'No, he pasado por un aborto espontáneo o una interrupción del embarazo', 'Prefiero no contestar']
+        options = ['Sí',
+                   'No, ya tengo hijos',
+                   'No, he pasado por un aborto espontáneo o una interrupción del embarazo',
+                   'Prefiero no contestar']
         for option in options:
             btn = Button(text=option)
             btn.bind(on_press=self.store_answer)
@@ -167,6 +183,7 @@ class Question3(Screen):
     def store_answer(self, instance):
         store.put('first_time_trying', answer=instance.text)
         self.manager.current = 'results'
+
 
 class ResultsScreen(Screen):
     def on_enter(self):
@@ -180,6 +197,7 @@ class ResultsScreen(Screen):
 
     def go_next(self, instance):
         self.manager.current = 'additional_questions'
+
 
 class AdditionalQuestions(Screen):
     def __init__(self, **kwargs):
@@ -197,6 +215,7 @@ class AdditionalQuestions(Screen):
         store.put('last_period_date', answer=str(date))
         self.manager.current = 'menstrual_calendar'
 
+
 class MenstrualCalendarScreen(Screen):
     def on_enter(self):
         self.display_menstrual_calendar()
@@ -206,41 +225,55 @@ class MenstrualCalendarScreen(Screen):
 
         responses = get_user_responses()
         last_period_date = responses.get('last_period_date')
-        flow_duration = int(responses.get('flow_duration', 5))  # Valor por defecto si no se proporciona
+        flow_duration = int(responses.get('flow_duration', 5))
+        # Valor por defecto si no se proporciona
 
         if last_period_date:
-            cycles = calculate_menstrual_calendar(last_period_date, flow_duration)
-            days_until_next = calculate_days_until_next_cycle(last_period_date, flow_duration)
+            cycles = calculate_menstrual_calendar(last_period_date,
+                                                  flow_duration)
+            days_until_next = calculate_days_until_next_cycle(last_period_date,
+                                                              flow_duration)
 
             if cycles:
-                layout = BoxLayout(orientation='vertical', padding=20, spacing=20)
-                
+                layout = BoxLayout(orientation='vertical', padding=20,
+                                   spacing=20)
+
                 # Mostrar los días de la semana
                 days_of_week = BoxLayout(orientation='horizontal')
                 for day in ['D', 'L', 'M', 'M', 'J', 'V', 'S']:
                     days_of_week.add_widget(Label(text=day, bold=True))
                 layout.add_widget(days_of_week)
-                
+
                 # Mostrar los números de los días de la semana actual
                 current_date = datetime.now()
-                start_of_week = current_date - timedelta(days=current_date.weekday() + 1)
+                start_of_week = current_date - timedelta(
+                    days=current_date.weekday() + 1)
                 days_of_month = BoxLayout(orientation='horizontal')
                 for i in range(7):
                     day_label = start_of_week + timedelta(days=i)
                     days_of_month.add_widget(Label(text=str(day_label.day)))
                 layout.add_widget(days_of_month)
-                
+
                 # Mostrar días restantes para el próximo ciclo
-                layout.add_widget(Label(text=f"Periodo en {days_until_next} días", font_size=24, bold=True, halign='center', valign='middle'))
-                
+                layout.add_widget(Label(
+                                        text=f"Periodo en {days_until_next} días",
+                                        font_size=24,
+                                        bold=True, halign='center',
+                                        valign='middle'))
+
                 # Mostrar ciclos menstruales
-                layout.add_widget(Label(text="Próximos Ciclos Menstruales", font_size=24, bold=True, halign='center', valign='middle'))
+                layout.add_widget(Label(text="Próximos Ciclos Menstruales",
+                                        font_size=24, bold=True,
+                                        halign='center', valign='middle'))
                 for i, (start, end) in enumerate(cycles):
-                    layout.add_widget(Label(text=f"Ciclo {i+1}: {start.strftime('%d/%m/%Y')} a {end.strftime('%d/%m/%Y')}", font_size=18, halign='center', valign='middle'))
-                
+                    layout.add_widget(
+                        Label(text=f"Ciclo {i+1}: {start.strftime('%d/%m/%Y')} a {end.strftime('%d/%m/%Y')}", font_size=18, halign='center', valign='middle'))
+
                 self.add_widget(layout)
 
 # Administrador de pantallas
+
+
 class ScreenManagement(ScreenManager):
     def __init__(self, **kwargs):
         super(ScreenManagement, self).__init__(**kwargs)
@@ -262,11 +295,13 @@ class ScreenManagement(ScreenManager):
             self.current = 'main'
 
 # Aplicación principal
+
+
 class MyApp(App):
     def build(self):
         sm = ScreenManagement()
         return sm
 
+
 if __name__ == '__main__':
     MyApp().run()
-
