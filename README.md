@@ -1,4 +1,4 @@
-# calendarioC# Historias de Usuario Epicas
+# Historias de Usuario Epicas
 
 ## Objetivos que se buscan
 ### 1. Acceso desde el telefono Android e iOS
