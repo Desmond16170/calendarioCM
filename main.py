@@ -26,7 +26,6 @@ def get_user_responses():
         responses['flow_duration'] = store.get('flow_duration')['answer']
     return responses
 
-
 def calculate_menstrual_calendar(last_period_date, flow_duration):
     try:
         start_date = datetime.strptime(last_period_date, '%d/%m/%Y')
@@ -40,7 +39,6 @@ def calculate_menstrual_calendar(last_period_date, flow_duration):
         cycles.append((cycle_start, cycle_end))
 
     return cycles
-
 
 def calculate_days_until_next_cycle(last_period_date, flow_duration):
     try:
@@ -271,3 +269,4 @@ class MyApp(App):
 
 if __name__ == '__main__':
     MyApp().run()
+
