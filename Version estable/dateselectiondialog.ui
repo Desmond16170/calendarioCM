@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DateSelectionDialog</class>
+ <widget class="QWidget" name="DateSelectionDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>466</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>466</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>466</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>421</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>MM</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>DD</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QComboBox" name="dayComboBox"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QComboBox" name="yearComboBox"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="monthComboBox"/>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>YYYY</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="dateQuestionLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>419</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>12</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(33, 46, 54);
+background-color: rgb(36, 49, 59);
+border-top-color: rgb(42, 59, 71);
+border-right-color: rgb(42, 59, 71);
+border-buttom-color: rgb(42, 59, 71);
+border-left-color: rgb(42, 59, 71);
+color: rgb(16, 131, 214);</string>
+   </property>
+   <property name="text">
+    <string>¿Cuándo fue el primer día de tu último período?</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>590</y>
+     <width>421</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="BotonAnterior_2">
+      <property name="styleSheet">
+       <string notr="true">border-style: solid;
+border-width: 1px;
+;
+background-color: rgb(129, 120, 255);
+background-color: rgb(255, 176, 248);
+color: rgb(255, 255, 255);
+background-color: rgb(7, 99, 157);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Anterior</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/images/Anterior.png</normaloff>:/images/images/Anterior.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="BotonSiguiente_2">
+      <property name="styleSheet">
+       <string notr="true">border-style: solid;
+border-width: 1px;
+;
+background-color: rgb(129, 120, 255);
+background-color: rgb(255, 176, 248);
+color: rgb(255, 255, 255);
+background-color: rgb(7, 99, 157);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Siguiente</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/images/Siguiente.png</normaloff>:/images/images/Siguiente.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="botonVolver_2">
+      <property name="styleSheet">
+       <string notr="true">border-style: solid;
+border-width: 1px;
+;
+background-color: rgb(0, 120, 100);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+</string>
+      </property>
+      <property name="text">
+       <string> Volver al menu</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/images/Menu.png</normaloff>:/images/images/Menu.png</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>470</y>
+     <width>171</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
