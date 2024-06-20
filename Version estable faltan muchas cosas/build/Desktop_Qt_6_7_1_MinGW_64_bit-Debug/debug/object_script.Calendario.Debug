@@ -1,0 +1,10 @@
+debug/dateselectiondialog.o
+debug/inicio.o
+debug/main.o
+debug/mainwindow.o
+debug/quiz_quedar_embarazada.o
+debug/usuario.o
+debug/moc_dateselectiondialog.o
+debug/moc_inicio.o
+debug/moc_mainwindow.o
+debug/moc_quiz_quedar_embarazada.o
