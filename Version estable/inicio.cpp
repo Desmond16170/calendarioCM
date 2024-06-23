@@ -13,8 +13,7 @@ inicio::inicio(QWidget *parent) :
     ui->setupUi(this);
     // Asumiendo que tu QTabWidget se llama tabWidget
     ui->tabWidget->setTabText(0, "Login");
-    ui->tabWidget->setTabText(1, "Singup");
-
+    ui->tabWidget->setTabText(1, "Sign Up");
 
     // Cargar usuarios desde el archivo
     loadUsersFromFile();
@@ -22,8 +21,8 @@ inicio::inicio(QWidget *parent) :
     // Conectar los botones con sus respectivas funciones
     connect(ui->loginButton, &QPushButton::clicked, this, &inicio::on_loginButton_clicked);
     connect(ui->signUpButton, &QPushButton::clicked, this, &inicio::on_signUpButton_clicked);
-    connect(ui->checkBox, &QCheckBox::stateChanged, this, &inicio::on_checkBox_stateChanged);
-    connect(ui->checkBoxs, &QCheckBox::stateChanged, this, &inicio::on_checkBox_2_stateChanged);
+    connect(ui->checkBoxs, &QCheckBox::stateChanged, this, &inicio::on_checkBox_stateChanged);
+    connect(ui->checkBox_2, &QCheckBox::stateChanged, this, &inicio::on_checkBox_2_stateChanged);
 }
 
 inicio::~inicio()
@@ -70,6 +69,7 @@ void inicio::performLogin()
     for (const Usuario &usuario : usuarios) {
         if (usuario.getNombreUsuario() == username && usuario.validarContrasena(password)) {
             QMessageBox::information(this, "Login", "Inicio de sesión exitoso");
+            emit loginSuccessful(new Usuario(usuario));  // Emitir la señal con el usuario logueado
             return;
         }
     }
@@ -133,4 +133,3 @@ void inicio::saveUserToFile(const Usuario &usuario)
     out << usuario.getNombreUsuario() << "," << usuario.getContrasena() << "\n";
     file.close();
 }
-

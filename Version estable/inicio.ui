@@ -189,7 +189,7 @@
       <string>User</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="checkBox_2">
      <property name="geometry">
       <rect>
        <x>180</x>

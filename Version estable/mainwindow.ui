@@ -51,64 +51,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Seguir mi embarazo</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QPushButton" name="button_controlar_peso_2">
-       <property name="minimumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Mejorar mi vida Sexual </string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QPushButton" name="button_nada_2">
-       <property name="minimumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Nada de lo anterior </string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QPushButton" name="button_seguir_periodo_2">
-       <property name="minimumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Descifrar mi flujo </string>
+        <string>Gestionar el ciclo mestrual</string>
        </property>
       </widget>
      </item>
@@ -131,27 +74,8 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QPushButton" name="button_entender_cuerpo_2">
-       <property name="minimumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>160</width>
-         <height>90</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Controlar mi peso</string>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="button_seguir_embarazo_2">
+      <widget class="QPushButton" name="button_entendermicuerpo">
        <property name="minimumSize">
         <size>
          <width>160</width>
@@ -165,7 +89,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Seguir mI periodo</string>
+        <string>Entender mi cuerpo(set de info)</string>
        </property>
       </widget>
      </item>
@@ -185,6 +109,44 @@
        </property>
        <property name="text">
         <string>Quedarme Embarazada</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="button_controlar_peso_2">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Mejorar mi vida Sexual </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="button_nada_2">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Nada de lo anterior </string>
        </property>
       </widget>
      </item>
@@ -239,6 +201,32 @@
     </property>
     <property name="text">
      <string>En que podemos ayudarte</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bienvenida</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="usernameLabel">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

@@ -1,3 +1,4 @@
+debug/info.o
 debug/resultado.o
 debug/dateselectiondialog.o
 debug/inicio.o
@@ -5,6 +6,7 @@ debug/main.o
 debug/mainwindow.o
 debug/quiz_quedar_embarazada.o
 debug/usuario.o
+debug/moc_info.o
 debug/moc_resultado.o
 debug/moc_dateselectiondialog.o
 debug/moc_inicio.o

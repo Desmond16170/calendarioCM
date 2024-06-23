@@ -36,7 +36,6 @@ public:
     void mostrarResultado();  // Hacer pública esta función
     void setFechaInicioUltimoPeriodo(const QDate &fecha);  // Nueva función pública
 
-
 signals:
     void quizTerminado();
     void regresar_a_Menu();
@@ -63,3 +62,4 @@ private:
 };
 
 #endif // QUIZ_QUEDAR_EMBARAZADA_H
+

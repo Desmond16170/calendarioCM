@@ -21,6 +21,7 @@ public:
     explicit Resultado(QWidget *parent = nullptr);
     ~Resultado();
     void setResultados(const QDate &fechaInicio, int duracionCiclo, int duracionPeriodo);
+    void setRespuestas(const QVector<int> &respuestas); // Nueva función para establecer las respuestas del usuario
 
 private:
     Ui::Resultado *ui;

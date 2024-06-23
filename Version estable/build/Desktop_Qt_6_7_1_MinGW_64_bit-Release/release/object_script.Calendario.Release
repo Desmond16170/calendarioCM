@@ -1,3 +1,4 @@
+release/info.o
 release/resultado.o
 release/dateselectiondialog.o
 release/inicio.o
@@ -5,6 +6,7 @@ release/main.o
 release/mainwindow.o
 release/quiz_quedar_embarazada.o
 release/usuario.o
+release/moc_info.o
 release/moc_resultado.o
 release/moc_dateselectiondialog.o
 release/moc_inicio.o

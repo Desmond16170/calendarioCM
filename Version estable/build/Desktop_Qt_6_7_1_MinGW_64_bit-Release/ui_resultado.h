@@ -22,6 +22,7 @@ class Ui_Resultado
 public:
     QLabel *contadorLabel;
     QCalendarWidget *calendarWidget;
+    QLabel *respuestasLabel;
 
     void setupUi(QWidget *Resultado)
     {
@@ -38,6 +39,9 @@ public:
         calendarWidget->setObjectName("calendarWidget");
         calendarWidget->setGeometry(QRect(10, 90, 441, 331));
         calendarWidget->setMaximumSize(QSize(999, 999));
+        respuestasLabel = new QLabel(Resultado);
+        respuestasLabel->setObjectName("respuestasLabel");
+        respuestasLabel->setGeometry(QRect(90, 580, 311, 101));
 
         retranslateUi(Resultado);
 
@@ -48,6 +52,7 @@ public:
     {
         Resultado->setWindowTitle(QCoreApplication::translate("Resultado", "Form", nullptr));
         contadorLabel->setText(QString());
+        respuestasLabel->setText(QString());
     } // retranslateUi
 
 };

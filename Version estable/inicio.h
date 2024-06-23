@@ -17,6 +17,9 @@ public:
     explicit inicio(QWidget *parent = nullptr);
     ~inicio();
 
+signals:
+    void loginSuccessful(Usuario *usuario);
+
 private slots:
     void on_loginButton_clicked();
     void on_signUpButton_clicked();

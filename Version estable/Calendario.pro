@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    info.cpp \
     resultado.cpp \
     dateselectiondialog.cpp \
     inicio.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     usuario.cpp
 
 HEADERS += \
+    info.h \
     resultado.h \
     dateselectiondialog.h \
     inicio.h \
@@ -26,6 +28,7 @@ HEADERS += \
     usuario.h
 
 FORMS += \
+    info.ui \
     resultado.ui\
     dateselectiondialog.ui \
     inicio.ui \

@@ -27,16 +27,16 @@ public:
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout_2;
     QPushButton *button_descifrar_flujo_2;
+    QPushButton *button_mejorar_vida_sexual_2;
+    QPushButton *button_entendermicuerpo;
+    QPushButton *button_quedarme_embarazada_2;
     QPushButton *button_controlar_peso_2;
     QPushButton *button_nada_2;
-    QPushButton *button_seguir_periodo_2;
-    QPushButton *button_mejorar_vida_sexual_2;
-    QPushButton *button_entender_cuerpo_2;
-    QPushButton *button_seguir_embarazo_2;
-    QPushButton *button_quedarme_embarazada_2;
     QLabel *label_2;
     QPushButton *pushButton_9;
     QLabel *label;
+    QLabel *label_3;
+    QLabel *usernameLabel;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -61,27 +61,6 @@ public:
 
         gridLayout_2->addWidget(button_descifrar_flujo_2, 0, 1, 1, 1);
 
-        button_controlar_peso_2 = new QPushButton(gridLayoutWidget);
-        button_controlar_peso_2->setObjectName("button_controlar_peso_2");
-        button_controlar_peso_2->setMinimumSize(QSize(160, 90));
-        button_controlar_peso_2->setMaximumSize(QSize(160, 90));
-
-        gridLayout_2->addWidget(button_controlar_peso_2, 2, 1, 1, 1);
-
-        button_nada_2 = new QPushButton(gridLayoutWidget);
-        button_nada_2->setObjectName("button_nada_2");
-        button_nada_2->setMinimumSize(QSize(160, 90));
-        button_nada_2->setMaximumSize(QSize(160, 90));
-
-        gridLayout_2->addWidget(button_nada_2, 3, 1, 1, 1);
-
-        button_seguir_periodo_2 = new QPushButton(gridLayoutWidget);
-        button_seguir_periodo_2->setObjectName("button_seguir_periodo_2");
-        button_seguir_periodo_2->setMinimumSize(QSize(160, 90));
-        button_seguir_periodo_2->setMaximumSize(QSize(160, 90));
-
-        gridLayout_2->addWidget(button_seguir_periodo_2, 2, 0, 1, 1);
-
         button_mejorar_vida_sexual_2 = new QPushButton(gridLayoutWidget);
         button_mejorar_vida_sexual_2->setObjectName("button_mejorar_vida_sexual_2");
         button_mejorar_vida_sexual_2->setMinimumSize(QSize(160, 90));
@@ -89,19 +68,12 @@ public:
 
         gridLayout_2->addWidget(button_mejorar_vida_sexual_2, 1, 1, 1, 1);
 
-        button_entender_cuerpo_2 = new QPushButton(gridLayoutWidget);
-        button_entender_cuerpo_2->setObjectName("button_entender_cuerpo_2");
-        button_entender_cuerpo_2->setMinimumSize(QSize(160, 90));
-        button_entender_cuerpo_2->setMaximumSize(QSize(160, 90));
+        button_entendermicuerpo = new QPushButton(gridLayoutWidget);
+        button_entendermicuerpo->setObjectName("button_entendermicuerpo");
+        button_entendermicuerpo->setMinimumSize(QSize(160, 90));
+        button_entendermicuerpo->setMaximumSize(QSize(160, 90));
 
-        gridLayout_2->addWidget(button_entender_cuerpo_2, 3, 0, 1, 1);
-
-        button_seguir_embarazo_2 = new QPushButton(gridLayoutWidget);
-        button_seguir_embarazo_2->setObjectName("button_seguir_embarazo_2");
-        button_seguir_embarazo_2->setMinimumSize(QSize(160, 90));
-        button_seguir_embarazo_2->setMaximumSize(QSize(160, 90));
-
-        gridLayout_2->addWidget(button_seguir_embarazo_2, 1, 0, 1, 1);
+        gridLayout_2->addWidget(button_entendermicuerpo, 1, 0, 1, 1);
 
         button_quedarme_embarazada_2 = new QPushButton(gridLayoutWidget);
         button_quedarme_embarazada_2->setObjectName("button_quedarme_embarazada_2");
@@ -109,6 +81,20 @@ public:
         button_quedarme_embarazada_2->setMaximumSize(QSize(160, 90));
 
         gridLayout_2->addWidget(button_quedarme_embarazada_2, 0, 0, 1, 1);
+
+        button_controlar_peso_2 = new QPushButton(gridLayoutWidget);
+        button_controlar_peso_2->setObjectName("button_controlar_peso_2");
+        button_controlar_peso_2->setMinimumSize(QSize(160, 90));
+        button_controlar_peso_2->setMaximumSize(QSize(160, 90));
+
+        gridLayout_2->addWidget(button_controlar_peso_2, 2, 0, 1, 1);
+
+        button_nada_2 = new QPushButton(gridLayoutWidget);
+        button_nada_2->setObjectName("button_nada_2");
+        button_nada_2->setMinimumSize(QSize(160, 90));
+        button_nada_2->setMaximumSize(QSize(160, 90));
+
+        gridLayout_2->addWidget(button_nada_2, 2, 1, 1, 1);
 
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName("label_2");
@@ -121,6 +107,12 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(160, 80, 141, 41));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(10, 20, 91, 21));
+        usernameLabel = new QLabel(centralwidget);
+        usernameLabel->setObjectName("usernameLabel");
+        usernameLabel->setGeometry(QRect(80, 20, 91, 21));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -134,17 +126,17 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        button_descifrar_flujo_2->setText(QCoreApplication::translate("MainWindow", "Seguir mi embarazo", nullptr));
+        button_descifrar_flujo_2->setText(QCoreApplication::translate("MainWindow", "Gestionar el ciclo mestrual", nullptr));
+        button_mejorar_vida_sexual_2->setText(QCoreApplication::translate("MainWindow", "Entender mi cuerpo ", nullptr));
+        button_entendermicuerpo->setText(QCoreApplication::translate("MainWindow", "Entender mi cuerpo(set de info)", nullptr));
+        button_quedarme_embarazada_2->setText(QCoreApplication::translate("MainWindow", "Quedarme Embarazada", nullptr));
         button_controlar_peso_2->setText(QCoreApplication::translate("MainWindow", "Mejorar mi vida Sexual ", nullptr));
         button_nada_2->setText(QCoreApplication::translate("MainWindow", "Nada de lo anterior ", nullptr));
-        button_seguir_periodo_2->setText(QCoreApplication::translate("MainWindow", "Descifrar mi flujo ", nullptr));
-        button_mejorar_vida_sexual_2->setText(QCoreApplication::translate("MainWindow", "Entender mi cuerpo ", nullptr));
-        button_entender_cuerpo_2->setText(QCoreApplication::translate("MainWindow", "Controlar mi peso", nullptr));
-        button_seguir_embarazo_2->setText(QCoreApplication::translate("MainWindow", "Seguir mI periodo", nullptr));
-        button_quedarme_embarazada_2->setText(QCoreApplication::translate("MainWindow", "Quedarme Embarazada", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Selecciona una opcion ", nullptr));
         pushButton_9->setText(QCoreApplication::translate("MainWindow", "Iniciar Sesion", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "En que podemos ayudarte", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Bienvenida", nullptr));
+        usernameLabel->setText(QString());
     } // retranslateUi
 
 };

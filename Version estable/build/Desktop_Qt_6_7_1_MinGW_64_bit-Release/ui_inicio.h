@@ -44,7 +44,7 @@ public:
     QLineEdit *loginPasswordLineEdit;
     QPushButton *loginButton;
     QLabel *label_5;
-    QCheckBox *checkBox;
+    QCheckBox *checkBox_2;
 
     void setupUi(QWidget *inicio)
     {
@@ -129,9 +129,9 @@ public:
         label_5 = new QLabel(LoginTab);
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(80, 100, 49, 16));
-        checkBox = new QCheckBox(LoginTab);
-        checkBox->setObjectName("checkBox");
-        checkBox->setGeometry(QRect(180, 190, 101, 22));
+        checkBox_2 = new QCheckBox(LoginTab);
+        checkBox_2->setObjectName("checkBox_2");
+        checkBox_2->setGeometry(QRect(180, 190, 101, 22));
         tabWidget->addTab(LoginTab, QString());
 
         retranslateUi(inicio);
@@ -154,7 +154,7 @@ public:
         label_4->setText(QCoreApplication::translate("inicio", "Password", nullptr));
         loginButton->setText(QCoreApplication::translate("inicio", "Login", nullptr));
         label_5->setText(QCoreApplication::translate("inicio", "User", nullptr));
-        checkBox->setText(QCoreApplication::translate("inicio", "Ver contrase\303\261a", nullptr));
+        checkBox_2->setText(QCoreApplication::translate("inicio", "Ver contrase\303\261a", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(LoginTab), QCoreApplication::translate("inicio", "Tab 2", nullptr));
     } // retranslateUi
 

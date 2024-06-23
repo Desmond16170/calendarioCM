@@ -11,6 +11,7 @@ QString Usuario::getContrasena() const {
     return contrasena;
 }
 
+
 bool Usuario::validarContrasena(const QString &contrasena) const {
     return this->contrasena == contrasena;
 }

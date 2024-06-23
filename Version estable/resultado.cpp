@@ -67,3 +67,14 @@ void Resultado::actualizarContador(const QDate &fechaInicio, int duracionCiclo) 
     int diasParaMenstruacion = fechaActual.daysTo(proximaMenstruacion);
     contadorLabel->setText(QString("Días para tu próxima menstruación: %1").arg(diasParaMenstruacion));
 }
+
+void Resultado::setRespuestas(const QVector<int> &respuestas)
+{
+    // Aquí puedes manejar las respuestas del usuario
+    // Por ejemplo, podrías mostrar un resumen de las respuestas en un QLabel
+    QString respuestasTexto;
+    for (int i = 0; i < respuestas.size(); ++i) {
+        respuestasTexto += QString("Pregunta %1: %2\n").arg(i + 1).arg(respuestas[i]);
+    }
+    ui->respuestasLabel->setText(respuestasTexto);  // Asegúrate de tener un QLabel llamado respuestasLabel en tu UI
+}

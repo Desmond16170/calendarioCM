@@ -16,7 +16,6 @@ Quiz_quedar_embarazada::Quiz_quedar_embarazada(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // Agrega preguntas con sus opciones y respuestas correctas
     texto.append({ "¿Cuál es la duración de tu ciclo menstrual (en días)?",
                   {"28", "30", "35", "Otro"},
                   -1 });
@@ -24,7 +23,7 @@ Quiz_quedar_embarazada::Quiz_quedar_embarazada(QWidget *parent) :
                   {"3", "5", "7", "Otro"},
                   -1 });
 
-    // Muestra la primera pregunta
+
     mostrarPregunta(texto[preguntaActual]);
 
     // Conecta los botones a las direcciones correspondientes
@@ -55,7 +54,6 @@ void Quiz_quedar_embarazada::setTextoEnLabel(const QString &texto) {
 
 void Quiz_quedar_embarazada::volver_a_Menu() {
     emit regresar_a_Menu();
-
 }
 
 void Quiz_quedar_embarazada::mostrarSiguientePregunta() {
@@ -134,7 +132,6 @@ void Quiz_quedar_embarazada::mostrarPantallaSeleccionFecha() {
     }
 }
 
-
 void Quiz_quedar_embarazada::calcularCicloMenstrual() {
     // Verificar si se ha seleccionado una fecha válida
     if (!fechaInicioUltimoPeriodo.isValid()) {
@@ -176,8 +173,6 @@ void Quiz_quedar_embarazada::mostrarResultado() {
 
     // No ocultar la ventana actual
 }
-
-
 
 void Quiz_quedar_embarazada::setFechaInicioUltimoPeriodo(const QDate &fecha) {
     fechaInicioUltimoPeriodo = fecha;
