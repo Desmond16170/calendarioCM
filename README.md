@@ -37,7 +37,7 @@ El proyecto consiste en desarrollar un prototipo de software llamado Flouwer, qu
     ```
 
 ### Uso en Windows
-- Ejecutar el archivo `Flouwer_Setup.exe`, ubicado en la carpeta `path/to/installer`.
+- Ejecutar el archivo `Flouwer_Setup.exe`, ubicado en la carpeta `main`.
 
 ## Link al demo
 Video demostrativo del programa implementado: [Demo](link del video)
