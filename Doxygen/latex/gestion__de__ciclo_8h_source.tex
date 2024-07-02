@@ -1,0 +1,93 @@
+\doxysection{gestion\+\_\+de\+\_\+ciclo.\+h}
+\hypertarget{gestion__de__ciclo_8h_source}{}\label{gestion__de__ciclo_8h_source}\mbox{\hyperlink{gestion__de__ciclo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ GESTION\_DE\_CICLO\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ GESTION\_DE\_CICLO\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{usuario_8h}{usuario.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dateselectiondialog_8h}{dateselectiondialog.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resultado_8h}{resultado.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_quiz__de___gestion__de___ciclo}{Quiz\_de\_Gestion\_de\_Ciclo}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ QString\ \mbox{\hyperlink{struct_quiz__de___gestion__de___ciclo_ad1a805754d86ef277b10588725f3ab32}{Pregunta}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{struct_quiz__de___gestion__de___ciclo_aafe0f1979001a7a86d1942ad23f1accf}{Respuestas}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_quiz__de___gestion__de___ciclo_a99277470c314542b1a11e28049990859}{Respuesta\_Correcta}};\ }
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgestion__de__ciclo}{gestion\_de\_ciclo}};}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgestion__de__ciclo}{gestion\_de\_ciclo}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classgestion__de__ciclo_ac6d4b4183c00e144a70c80df6f224e5e}{gestion\_de\_ciclo}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classgestion__de__ciclo_a7c3162b9064483259b5b33d13a4d7ee4}{\string~gestion\_de\_ciclo}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_a612b92cd319ac64f299bfceea52f58ab}{reiniciarQuiz}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_a384323ee808129098b403d4ba4b5945c}{setTextoEnLabel}}(\textcolor{keyword}{const}\ QString\ \&texto);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_aae7d02678b4ee6acb8c376c54b5b6a9b}{volver\_a\_Menu}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_a6b23663885cb5d43e3e516c9f4a39322}{guardarEstado}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_a5d1f328f32b1d0ba19587941282206ee}{cargarEstado}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_ae2e2117521bf79102b3178e2d218e6ee}{setUsuario}}(\mbox{\hyperlink{class_usuario}{Usuario}}\ *usuario);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ QVector<int>\ \mbox{\hyperlink{classgestion__de__ciclo_a50af49eb3083622f3e4856e0ad7acc2d}{getRespuestas}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_af63c3e08ad5fd15ba4eef24d8a85efe7}{mostrarResultado}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_ae2730eb378da110e07be071fb516193d}{setFechaInicioUltimoPeriodo}}(\textcolor{keyword}{const}\ QDate\ \&fecha);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classgestion__de__ciclo_a016aa2691cc6c9c3922f3949a064fb45}{isWindowVisible}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_a4e50d956d190a465993aeb32e83a5aa7}{showEvent}}(QShowEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ signals:}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_a0bb8c20743ae9e81d221aa36dffdd214}{quizTerminado}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgestion__de__ciclo_ac79d2aa46ac1282c9e2a95cba64cc8ef}{regresar\_a\_Menu}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarSiguientePregunta();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPreguntaAnterior();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ calcularCicloMenstrual();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPantallaSeleccionFecha();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_botonVolver\_2\_clicked();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00152\ \ \ \ \ Ui::gestion\_de\_ciclo\ *ui;\ }
+\DoxyCodeLine{00153\ \ \ \ \ QVector<Quiz\_de\_Gestion\_de\_Ciclo>\ texto;\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ preguntaActual;\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ respuestasCorrectas;\ }
+\DoxyCodeLine{00156\ \ \ \ \ \mbox{\hyperlink{class_usuario}{Usuario}}\ *usuario;\ }
+\DoxyCodeLine{00157\ \ \ \ \ QDate\ fechaInicioUltimoPeriodo;\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionCiclo;\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionPeriodo;\ }
+\DoxyCodeLine{00160\ \ \ \ \ QVector<int>\ respuestas;\ }
+\DoxyCodeLine{00161\ \ \ \ \ QDate\ diasFertilesInicio;\ }
+\DoxyCodeLine{00162\ \ \ \ \ QDate\ diasFertilesFin;\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPregunta(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_quiz__de___gestion__de___ciclo}{Quiz\_de\_Gestion\_de\_Ciclo}}\ \&pregunta);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ guardarRespuestas();}
+\DoxyCodeLine{00174\ \};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GESTION\_DE\_CICLO\_H}}
+
+\end{DoxyCode}

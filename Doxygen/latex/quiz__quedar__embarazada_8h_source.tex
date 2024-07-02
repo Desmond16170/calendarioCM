@@ -1,0 +1,87 @@
+\doxysection{quiz\+\_\+quedar\+\_\+embarazada.\+h}
+\hypertarget{quiz__quedar__embarazada_8h_source}{}\label{quiz__quedar__embarazada_8h_source}\mbox{\hyperlink{quiz__quedar__embarazada_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ QUIZ\_QUEDAR\_EMBARAZADA\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ QUIZ\_QUEDAR\_EMBARAZADA\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{usuario_8h}{usuario.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dateselectiondialog_8h}{dateselectiondialog.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resultado_8h}{resultado.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_quiz__de___quedar___embarazada}{Quiz\_de\_Quedar\_Embarazada}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ QString\ \mbox{\hyperlink{struct_quiz__de___quedar___embarazada_ad9e724929f1cd6b636b763b0e8b79b99}{Pregunta}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{struct_quiz__de___quedar___embarazada_a61b8920c5de96681fe60ad46ff9be5e0}{Respuestas}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_quiz__de___quedar___embarazada_a2672f68923597cc719906b677f522922}{Respuesta\_Correcta}};\ }
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quiz__quedar__embarazada}{Quiz\_quedar\_embarazada}};}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_quiz__quedar__embarazada}{Quiz\_quedar\_embarazada}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_affae1919ef02d428e2c88426b294384f}{Quiz\_quedar\_embarazada}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_quiz__quedar__embarazada_ad52fd8ed03cff7d0ff5478177a990833}{\string~Quiz\_quedar\_embarazada}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_a8a1ce789fb9127274a55b6106c2a6ff9}{reiniciarQuiz}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_a798b47743018803425b92ebcde60644a}{setTextoEnLabel}}(\textcolor{keyword}{const}\ QString\ \&texto);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_a924b45c18d14649506d120af9ce175ae}{volver\_a\_Menu}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_aa09f4391a23ccdc1f16b837f645b350f}{guardarEstado}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_afdd316336173a43b58801bc05051b20f}{cargarEstado}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_aa939dc30d4797b049ab9c303808eabfe}{setUsuario}}(\mbox{\hyperlink{class_usuario}{Usuario}}\ *usuario);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ QVector<int>\ \mbox{\hyperlink{class_quiz__quedar__embarazada_a715275e7ce267e048947abe5c5d72398}{getRespuestas}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_afc4b6cd4f7fdcc3ef0b02880945b31eb}{mostrarResultado}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_a8289e32592c21f39f884d35d89e5ced7}{setFechaInicioUltimoPeriodo}}(\textcolor{keyword}{const}\ QDate\ \&fecha);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ signals:}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_a846f6ebfe13e4041eb775cba20c63693}{quizTerminado}}();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_quiz__quedar__embarazada_a0336e0ccf45ad548bcfde51b3ac11471}{regresar\_a\_Menu}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarSiguientePregunta();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPreguntaAnterior();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ calcularCicloMenstrual();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPantallaSeleccionFecha();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_botonVolver\_2\_clicked();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00138\ \ \ \ \ Ui::Quiz\_quedar\_embarazada\ *ui;\ }
+\DoxyCodeLine{00139\ \ \ \ \ QVector<Quiz\_de\_Quedar\_Embarazada>\ texto;\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ preguntaActual;\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ respuestasCorrectas;\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{class_usuario}{Usuario}}\ *usuario;\ }
+\DoxyCodeLine{00143\ \ \ \ \ QDate\ fechaInicioUltimoPeriodo;\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionCiclo;\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionPeriodo;\ }
+\DoxyCodeLine{00146\ \ \ \ \ QVector<int>\ respuestas;\ }
+\DoxyCodeLine{00147\ \ \ \ \ QDate\ diasFertilesInicio;\ }
+\DoxyCodeLine{00148\ \ \ \ \ QDate\ diasFertilesFin;\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPregunta(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_quiz__de___quedar___embarazada}{Quiz\_de\_Quedar\_Embarazada}}\ \&pregunta);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ guardarRespuestas();}
+\DoxyCodeLine{00160\ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ QUIZ\_QUEDAR\_EMBARAZADA\_H}}
+
+\end{DoxyCode}

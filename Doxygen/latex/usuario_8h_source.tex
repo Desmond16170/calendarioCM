@@ -1,0 +1,56 @@
+\doxysection{usuario.\+h}
+\hypertarget{usuario_8h_source}{}\label{usuario_8h_source}\mbox{\hyperlink{usuario_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ USUARIO\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ USUARIO\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_usuario}{Usuario}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_usuario_aa96ca8c30bdf93ec749f5879c16a2fb0}{Usuario}}(\textcolor{keyword}{const}\ QString\ \&nombreUsuario,\ \textcolor{keyword}{const}\ QString\ \&contrasena);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ QString\ \mbox{\hyperlink{class_usuario_aee03e5581418d1ecf6b849a256db55f2}{getNombreUsuario}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ QString\ \mbox{\hyperlink{class_usuario_ae9101c610ed73e1b42deb8730df14278}{getContrasena}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_usuario_a38f21c18874430abb35f9278c5d328ab}{validarContrasena}}(\textcolor{keyword}{const}\ QString\ \&contrasena)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_usuario_ad2de019a4f7791f018574956be50a13c}{tieneRespuestasGuardadas}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_usuario_ae4272c1dcb88383b19cf8d814191d74e}{agregarRespuesta}}(\textcolor{keyword}{const}\ QString\ \&respuesta);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{class_usuario_a6632c0f7e3bc54bab327bbb2e16af8b9}{obtenerRespuestas}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_usuario_a75e270cb5f3989a0f620aabd702c4a20}{setDuracionCiclo}}(\textcolor{keywordtype}{int}\ duracion);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_usuario_af0fa74e2f011bde3542664b9f50551a2}{setDuracionPeriodo}}(\textcolor{keywordtype}{int}\ duracion);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_usuario_afb1a1ba20e8a9c84fba0b1273f939fb6}{setFechaInicioUltimoPeriodo}}(\textcolor{keyword}{const}\ QDate\ \&fecha);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_usuario_ae4aa00b32bb172cc8a95cba795350e9b}{getDuracionCiclo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_usuario_ae216cf00969a574b8f34c8b73df4c450}{getDuracionPeriodo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ QDate\ \mbox{\hyperlink{class_usuario_a761b1ce02ef3fa19fd9bb95a3ce9a63d}{getFechaInicioUltimoPeriodo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{class_usuario_ad4b9bd2e59cc42470916e2e6c48c6182}{cargarRespuestasGuardadas}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \mbox{\hyperlink{class_usuario_ac61e1e4e19945e7a43cf5b6f2c40d659}{encriptarContrasena}}(\textcolor{keyword}{const}\ QString\ \&contrasena);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00116\ \ \ \ \ QString\ nombreUsuario;\ }
+\DoxyCodeLine{00117\ \ \ \ \ QString\ contrasena;\ }
+\DoxyCodeLine{00118\ \ \ \ \ QVector<QString>\ respuestas;\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionCiclo;\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionPeriodo;\ }
+\DoxyCodeLine{00122\ \ \ \ \ QDate\ fechaInicioUltimoPeriodo;\ }
+\DoxyCodeLine{00123\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ USUARIO\_H}}
+
+\end{DoxyCode}

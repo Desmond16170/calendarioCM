@@ -1,0 +1,195 @@
+\doxysection{gestion\+\_\+de\+\_\+ciclo Class Reference}
+\hypertarget{classgestion__de__ciclo}{}\label{classgestion__de__ciclo}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+
+
+La clase \doxylink{classgestion__de__ciclo}{gestion\+\_\+de\+\_\+ciclo} administra el ciclo menstrual del usuario y presenta un quiz interactivo.  
+
+
+
+
+{\ttfamily \#include $<$gestion\+\_\+de\+\_\+ciclo.\+h$>$}
+
+Inheritance diagram for gestion\+\_\+de\+\_\+ciclo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgestion__de__ciclo}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgestion__de__ciclo_a0bb8c20743ae9e81d221aa36dffdd214}\label{classgestion__de__ciclo_a0bb8c20743ae9e81d221aa36dffdd214} 
+void {\bfseries quiz\+Terminado} ()
+\begin{DoxyCompactList}\small\item\em Señal emitida cuando el quiz ha terminado. \end{DoxyCompactList}\item 
+\Hypertarget{classgestion__de__ciclo_ac79d2aa46ac1282c9e2a95cba64cc8ef}\label{classgestion__de__ciclo_ac79d2aa46ac1282c9e2a95cba64cc8ef} 
+void {\bfseries regresar\+\_\+a\+\_\+\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Señal emitida para regresar al menú. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgestion__de__ciclo_ac6d4b4183c00e144a70c80df6f224e5e}{gestion\+\_\+de\+\_\+ciclo}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classgestion__de__ciclo}{gestion\+\_\+de\+\_\+ciclo}. \end{DoxyCompactList}\item 
+\Hypertarget{classgestion__de__ciclo_a7c3162b9064483259b5b33d13a4d7ee4}\label{classgestion__de__ciclo_a7c3162b9064483259b5b33d13a4d7ee4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}gestion\+\_\+de\+\_\+ciclo} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \doxylink{classgestion__de__ciclo}{gestion\+\_\+de\+\_\+ciclo}. \end{DoxyCompactList}\item 
+\Hypertarget{classgestion__de__ciclo_a612b92cd319ac64f299bfceea52f58ab}\label{classgestion__de__ciclo_a612b92cd319ac64f299bfceea52f58ab} 
+void {\bfseries reiniciar\+Quiz} ()
+\begin{DoxyCompactList}\small\item\em Reinicia el quiz a su estado inicial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgestion__de__ciclo_a384323ee808129098b403d4ba4b5945c}{set\+Texto\+En\+Label}} (const QString \&texto)
+\begin{DoxyCompactList}\small\item\em Establece el texto en un QLabel (cuadro de texto) de la interfaz gráfica. \end{DoxyCompactList}\item 
+\Hypertarget{classgestion__de__ciclo_aae7d02678b4ee6acb8c376c54b5b6a9b}\label{classgestion__de__ciclo_aae7d02678b4ee6acb8c376c54b5b6a9b} 
+void {\bfseries volver\+\_\+a\+\_\+\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Vuelve al menú principal. \end{DoxyCompactList}\item 
+\Hypertarget{classgestion__de__ciclo_a6b23663885cb5d43e3e516c9f4a39322}\label{classgestion__de__ciclo_a6b23663885cb5d43e3e516c9f4a39322} 
+void {\bfseries guardar\+Estado} ()
+\begin{DoxyCompactList}\small\item\em Guarda el estado actual de la aplicación. \end{DoxyCompactList}\item 
+\Hypertarget{classgestion__de__ciclo_a5d1f328f32b1d0ba19587941282206ee}\label{classgestion__de__ciclo_a5d1f328f32b1d0ba19587941282206ee} 
+void {\bfseries cargar\+Estado} ()
+\begin{DoxyCompactList}\small\item\em Carga el estado previamente guardado de la aplicación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgestion__de__ciclo_ae2e2117521bf79102b3178e2d218e6ee}{set\+Usuario}} (\mbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}usuario)
+\begin{DoxyCompactList}\small\item\em Establece el usuario actual. \end{DoxyCompactList}\item 
+QVector$<$ int $>$ \mbox{\hyperlink{classgestion__de__ciclo_a50af49eb3083622f3e4856e0ad7acc2d}{get\+Respuestas}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene las respuestas del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgestion__de__ciclo_af63c3e08ad5fd15ba4eef24d8a85efe7}{mostrar\+Resultado}} ()
+\begin{DoxyCompactList}\small\item\em Muestra el resultado del quiz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgestion__de__ciclo_ae2730eb378da110e07be071fb516193d}{set\+Fecha\+Inicio\+Ultimo\+Periodo}} (const QDate \&fecha)
+\begin{DoxyCompactList}\small\item\em Establece la fecha de inicio del último período menstrual. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgestion__de__ciclo_a016aa2691cc6c9c3922f3949a064fb45}{is\+Window\+Visible}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si la ventana está visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgestion__de__ciclo_a4e50d956d190a465993aeb32e83a5aa7}{show\+Event}} (QShow\+Event \texorpdfstring{$\ast$}{*}event) override
+\begin{DoxyCompactList}\small\item\em Evento que se ejecuta al mostrar la ventana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La clase \doxylink{classgestion__de__ciclo}{gestion\+\_\+de\+\_\+ciclo} administra el ciclo menstrual del usuario y presenta un quiz interactivo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgestion__de__ciclo_ac6d4b4183c00e144a70c80df6f224e5e}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{gestion\_de\_ciclo()}{gestion\_de\_ciclo()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_ac6d4b4183c00e144a70c80df6f224e5e} 
+gestion\+\_\+de\+\_\+ciclo\+::gestion\+\_\+de\+\_\+ciclo (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor de la clase \doxylink{classgestion__de__ciclo}{gestion\+\_\+de\+\_\+ciclo}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & El widget padre que contendrá a los otros widgets en esta ventana\\
+\hline
+{\em parent} & Puntero al widget padre \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgestion__de__ciclo_a50af49eb3083622f3e4856e0ad7acc2d}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!getRespuestas@{getRespuestas}}
+\index{getRespuestas@{getRespuestas}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{getRespuestas()}{getRespuestas()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_a50af49eb3083622f3e4856e0ad7acc2d} 
+QVector$<$ int $>$ gestion\+\_\+de\+\_\+ciclo\+::get\+Respuestas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene las respuestas del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Vector de enteros con las respuestas del usuario 
+\end{DoxyReturn}
+\Hypertarget{classgestion__de__ciclo_a016aa2691cc6c9c3922f3949a064fb45}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!isWindowVisible@{isWindowVisible}}
+\index{isWindowVisible@{isWindowVisible}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{isWindowVisible()}{isWindowVisible()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_a016aa2691cc6c9c3922f3949a064fb45} 
+bool gestion\+\_\+de\+\_\+ciclo\+::is\+Window\+Visible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si la ventana está visible. 
+
+\begin{DoxyReturn}{Returns}
+Booleano indicando si la ventana está visible
+
+true si la ventana está visible, false en caso contrario 
+\end{DoxyReturn}
+\Hypertarget{classgestion__de__ciclo_af63c3e08ad5fd15ba4eef24d8a85efe7}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!mostrarResultado@{mostrarResultado}}
+\index{mostrarResultado@{mostrarResultado}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{mostrarResultado()}{mostrarResultado()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_af63c3e08ad5fd15ba4eef24d8a85efe7} 
+void gestion\+\_\+de\+\_\+ciclo\+::mostrar\+Resultado (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Muestra el resultado del quiz. 
+
+Muestra el resultado del ciclo menstrual. \Hypertarget{classgestion__de__ciclo_ae2730eb378da110e07be071fb516193d}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!setFechaInicioUltimoPeriodo@{setFechaInicioUltimoPeriodo}}
+\index{setFechaInicioUltimoPeriodo@{setFechaInicioUltimoPeriodo}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{setFechaInicioUltimoPeriodo()}{setFechaInicioUltimoPeriodo()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_ae2730eb378da110e07be071fb516193d} 
+void gestion\+\_\+de\+\_\+ciclo\+::set\+Fecha\+Inicio\+Ultimo\+Periodo (\begin{DoxyParamCaption}\item[{const QDate \&}]{fecha}{}\end{DoxyParamCaption})}
+
+
+
+Establece la fecha de inicio del último período menstrual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fecha} & Objeto QDate con la fecha de inicio \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgestion__de__ciclo_a384323ee808129098b403d4ba4b5945c}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!setTextoEnLabel@{setTextoEnLabel}}
+\index{setTextoEnLabel@{setTextoEnLabel}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{setTextoEnLabel()}{setTextoEnLabel()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_a384323ee808129098b403d4ba4b5945c} 
+void gestion\+\_\+de\+\_\+ciclo\+::set\+Texto\+En\+Label (\begin{DoxyParamCaption}\item[{const QString \&}]{texto}{}\end{DoxyParamCaption})}
+
+
+
+Establece el texto en un QLabel (cuadro de texto) de la interfaz gráfica. 
+
+Establece el texto en un QLabel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texto} & Cadena de caracteres \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgestion__de__ciclo_ae2e2117521bf79102b3178e2d218e6ee}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!setUsuario@{setUsuario}}
+\index{setUsuario@{setUsuario}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{setUsuario()}{setUsuario()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_ae2e2117521bf79102b3178e2d218e6ee} 
+void gestion\+\_\+de\+\_\+ciclo\+::set\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}}]{usuario}{}\end{DoxyParamCaption})}
+
+
+
+Establece el usuario actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario} & Puntero al objeto \doxylink{class_usuario}{Usuario} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgestion__de__ciclo_a4e50d956d190a465993aeb32e83a5aa7}\index{gestion\_de\_ciclo@{gestion\_de\_ciclo}!showEvent@{showEvent}}
+\index{showEvent@{showEvent}!gestion\_de\_ciclo@{gestion\_de\_ciclo}}
+\doxysubsubsection{\texorpdfstring{showEvent()}{showEvent()}}
+{\footnotesize\ttfamily \label{classgestion__de__ciclo_a4e50d956d190a465993aeb32e83a5aa7} 
+void gestion\+\_\+de\+\_\+ciclo\+::show\+Event (\begin{DoxyParamCaption}\item[{QShow\+Event \texorpdfstring{$\ast$}{*}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Evento que se ejecuta al mostrar la ventana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Puntero al objeto QShow\+Event \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gestion__de__ciclo_8h}{gestion\+\_\+de\+\_\+ciclo.\+h}}\item 
+\mbox{\hyperlink{gestion__de__ciclo_8cpp}{gestion\+\_\+de\+\_\+ciclo.\+cpp}}\end{DoxyCompactItemize}

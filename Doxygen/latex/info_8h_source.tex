@@ -1,0 +1,59 @@
+\doxysection{info.\+h}
+\hypertarget{info_8h_source}{}\label{info_8h_source}\mbox{\hyperlink{info_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ INFO\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ INFO\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_info_pregunta}{InfoPregunta}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ QString\ \mbox{\hyperlink{struct_info_pregunta_a62afb4d66edf90f1bb7eede69c243b54}{Pregunta}};\ }
+\DoxyCodeLine{00022\ \ \ \ \ QString\ \mbox{\hyperlink{struct_info_pregunta_ab24af4f42e41e35180da8b251c92cf14}{Respuesta}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ QString\ \mbox{\hyperlink{struct_info_pregunta_ab7e69a0b1d3f470ae01a7c5174f54d70}{Imagen}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ QString\ \mbox{\hyperlink{struct_info_pregunta_a0468d421d086f472672ba98e878e9874}{URL}};\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_info_pregunta_afdc15d96db29201e397c336d6d8ae0d1}{InfoPregunta}}(\textcolor{keyword}{const}\ QString\&\ p,\ \textcolor{keyword}{const}\ QString\&\ r,\ \textcolor{keyword}{const}\ QString\&\ i,\ \textcolor{keyword}{const}\ QString\&\ u)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_info_pregunta_a62afb4d66edf90f1bb7eede69c243b54}{Pregunta}}(p),\ \mbox{\hyperlink{struct_info_pregunta_ab24af4f42e41e35180da8b251c92cf14}{Respuesta}}(r),\ \mbox{\hyperlink{struct_info_pregunta_ab7e69a0b1d3f470ae01a7c5174f54d70}{Imagen}}(i),\ \mbox{\hyperlink{struct_info_pregunta_a0468d421d086f472672ba98e878e9874}{URL}}(u)\ \{\}}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinfo}{info}};}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinfo}{info}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classinfo_ab90b6b26a90eb53c1f7f185887f9a952}{info}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classinfo_a7c4a6aa1f58ec72e25dcc62b7163e742}{\string~info}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinfo_a21d8b7b2ab5ab8d85be4f630e206520e}{reiniciarInfo}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarSiguientePregunta();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPreguntaAnterior();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ volver\_a\_Menu();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_botonVolver\_clicked();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_url\_linkActivated(\textcolor{keyword}{const}\ QString\ \&link);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \ \ Ui::info\ *ui;\ }
+\DoxyCodeLine{00094\ \ \ \ \ QVector<InfoPregunta>\ texto;\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ preguntaActual;\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ respuestasCorrectas;\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ mostrarPregunta(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_info_pregunta}{InfoPregunta}}\ \&pregunta);}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INFO\_H}}
+
+\end{DoxyCode}

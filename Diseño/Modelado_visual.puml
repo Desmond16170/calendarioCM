@@ -1,0 +1,49 @@
+@startuml "Flouwer"
+
+scale .7
+
+!define RECTANGLE class
+!define LAPTOP [Laptop]
+!define PERSON [Usuario]
+
+!include <osa/laptop/laptop>
+!include <C4/C4_Container>
+!include <tupadr3/common>
+!include <office/Servers/application_server>
+!include <office/Servers/database_server>
+!include <kubernetes/k8s-sprites-unlabeled-25pct>
+!include <tupadr3/font-awesome/database>
+!include <tupadr3/font-awesome/server>
+
+rectangle "PC\n <$laptop>" as LaptopObject #White
+Person(personAlias, "users", "client / admin") #BlueViolet
+
+OFF_APPLICATION_SERVER(app,App) #YellowGreen
+
+node "local application" <<$cloudogu>> {
+    OFF_DATABASE_SERVER(dblocales,Local dBs) #LimeGreen
+    FA_DATABASE(db1, Flouwer data,database,Blue) #LightGray
+    FA_DATABASE(db2,Login data ,database, Red) #LightGray
+    note top of dblocales : Base de datos local\npara usuarios y datos 
+}
+
+
+skinparam rectangle {
+    BackgroundColor #00ABBF
+    FontColor BLACK
+    FontStyle Bold
+}
+
+
+rectangle " -Diagrama_interfaz_gráfica -Diagrama_de_clases -Diagrama_componentes &conectores -Diagrama_de_secuencia" as DiagramaRef {
+} 
+
+personAlias --> LaptopObject : Access to
+LaptopObject --> app : Log in
+
+app --> dblocales : connection to
+dblocales --> db1 : Database access
+dblocales --> db2 
+
+app --> DiagramaRef : Built according to
+@enduml

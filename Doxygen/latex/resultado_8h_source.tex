@@ -1,0 +1,55 @@
+\doxysection{resultado.\+h}
+\hypertarget{resultado_8h_source}{}\label{resultado_8h_source}\mbox{\hyperlink{resultado_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ RESULTADO\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ RESULTADO\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}qcalendarwidget.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}qlabel.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resultado}{Resultado}};}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resultado}{Resultado}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_resultado_a1febde5902d2c1f75b8e29e33f444edc}{Resultado}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_resultado_a7600871ca3076ed7bb68fe734c51c862}{\string~Resultado}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resultado_a0bddf85d7ac4bf2d24aa3b5b5572f239}{setResultados}}(\textcolor{keyword}{const}\ QDate\ \&fechaInicio,\ \textcolor{keywordtype}{int}\ duracionCiclo,\ \textcolor{keywordtype}{int}\ duracionPeriodo);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resultado_a5291f4dcd3eba04bf4d1631210ce9038}{setRespuestas}}(\textcolor{keyword}{const}\ QVector<int>\ \&respuestas);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resultado_ae5b0e4903ef8d9515ecea38189186cf0}{setDiasFertiles}}(\textcolor{keyword}{const}\ QDate\ \&\mbox{\hyperlink{classinicio}{inicio}},\ \textcolor{keyword}{const}\ QDate\ \&fin);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_botonVolver\_2\_clicked();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ Ui::Resultado\ *ui;\ }
+\DoxyCodeLine{00072\ \ \ \ \ QCalendarWidget\ *calendarWidget;\ }
+\DoxyCodeLine{00073\ \ \ \ \ QLabel\ *contadorLabel;\ }
+\DoxyCodeLine{00074\ \ \ \ \ QDate\ fechaInicioUltimoPeriodo;\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionCiclo;\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ duracionPeriodo;\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ actualizarCalendario(\textcolor{keyword}{const}\ QDate\ \&fechaInicio,\ \textcolor{keywordtype}{int}\ duracionCiclo,\ \textcolor{keywordtype}{int}\ duracionPeriodo);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ actualizarCalendario();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ actualizarContador(\textcolor{keyword}{const}\ QDate\ \&fechaInicio,\ \textcolor{keywordtype}{int}\ duracionCiclo);}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RESULTADO\_H}}
+\DoxyCodeLine{00100\ }
+
+\end{DoxyCode}

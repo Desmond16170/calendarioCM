@@ -1,0 +1,64 @@
+@startuml
+!define RECTANGLE class
+
+RECTANGLE LoginSystem {
+  + iniciarSesion()
+  + manejarVentanaRegistro()
+  + acceder a db
+  + envía a credenciales a Global
+  + modifica usuarios en db (admin)
+}
+
+RECTANGLE MainWindow {
+  + utiliza Global
+  + accede a servicios
+  + restringe servicios (cliente o admin)
+  + utiliza DatabaseHeader
+}
+
+RECTANGLE Statistic {
+  + accede a DatabaseHeader
+}
+
+RECTANGLE db {
+  + accede a db
+}
+
+cloud "Base de Datos" {
+}
+
+db --> "Base de Datos" : acceso a
+
+RECTANGLE DatabaseHeader {
+  + interactuar con Flouwer_db
+}
+
+cloud "Base de Datos\n(Flouwer_db)" {
+}
+
+DatabaseHeader --> "Base de Datos\n(Flouwer_db)" : acceso a
+
+RECTANGLE Global {
+  + tipoUsuario
+}
+
+RECTANGLE GestionCicloMestrual{
+  + utiliza DatabaseHeader
+}
+
+RECTANGLE GestionAprender{
+    + utiliza DatabaseHeader
+}
+
+LoginSystem --> db : acceder a
+LoginSystem --> Global : guarda tipoUsuario
+MainWindow --> LoginSystem : inciar sesión
+MainWindow --> Global : utiliza y afecta comportamiento
+MainWindow --> GestionCicloMestrual : accede a
+MainWindow --> GestionAprender : accede a 
+MainWindow --> Statistic : accede a
+GestionAprender --> DatabaseHeader : utiliza
+GestionCicloMestrual --> DatabaseHeader : utiliza
+
+
+@enduml

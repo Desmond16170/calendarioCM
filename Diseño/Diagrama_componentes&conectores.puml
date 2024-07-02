@@ -1,0 +1,78 @@
+@startuml
+!include <archimate/Archimate>
+!define LAPTOP [Laptop]
+
+title Flouwer: period tracker graphical user interface
+' Element1 
+node "Means of Access"  {
+    actor user #LightBlue
+    rectangle "PC\n <$laptop>" as LaptopObject #White
+}
+
+node "Entry System"{
+package "componentes Entry System"{
+    Application_Component(login, "login \n\n UI_login")
+    Application_Component(signup, "signup \n\n UI_signup")
+    Application_Component(Menu, "Menu \n\n UI_main")
+    Application_Component(disconnet_button, "disconnet button")
+}
+    Application_Component(db, "dB")
+    Application_Component(global, "Global")
+    Technology_Artifact(LoginSystem, "class LoginSystem")
+    Technology_Artifact(db1, "class DB")
+    Technology_Artifact(Global, "class Global")
+
+}
+
+node "Service System"{
+    package "clase-componente-STA"{
+        Application_Component(statistics, "statistics \n\n UI_statistics")
+        Technology_Artifact(Statistic_ ,"class Statistic ")
+    }
+
+    package "clase-componente-FP"{
+        Application_Component(gestion_ciclo_mestrual, "Gestion Ciclo Mestrual \n\n UI_gestion_ciclo_mestrual")
+        Application_Component(calendario_details, "calendario \n\n UI_calendario")
+        Technology_Artifact(calendario,"class InfoCalendario")
+    }
+
+    package "clase-componente-AP"{
+        Application_Component(gestion_aprender, "Gestion Aprender \n\n UI_gestion_aprender")
+        Technology_Artifact(aprender_, "class Aprender")
+    }
+    Technology_Artifact(DatabaseHeader_ , "class DatabaseHeader")
+    Technology_Artifact(MainWindow,"class MainWindow")
+    Application_Component(db2, "Flouwer_dB")
+    Application_Component(manage_period_information, "manage period information \n control panel \n\n UI_perido information")
+}
+
+[LoginSystem] -- [componentes Entry System]
+[Menu] --> [disconnet_button] : close app
+[Menu] --> [login] : connected to the system
+[Menu] --> [signup] : signup in system
+[signup] --> [db] : consult or modify
+[login] --> [db] : consult or modify
+[Global] --> [global]
+[db1] --> [db]
+[db] --> [global] : send credentials
+
+LaptopObject --> "Entry System" : Login to the app
+[Menu] --> "Service System"
+user --> LaptopObject
+
+
+[MainWindow] --> [manage_period_information]
+[manage_period_information] --> "clase-componente-FP" : gestion ciclo
+[manage_period_information] --> "clase-componente-STA" : panel
+[manage_period_information] --> "clase-componente-AP" : gestion aprender
+[aprender_] -up-> [gestion_aprender]
+[aprender_] <-down- [db2]
+[calendario] -up-> [gestion_ciclo_mestrual]
+[calendario] -up-> [calendario_details]
+[calendario] <-down- [db2]
+[Statistic_] <-down- [db2]
+[Statistic_] -up-> [statistics]
+[DatabaseHeader_] -up-> [db2]
+
+
+@enduml

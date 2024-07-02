@@ -1,0 +1,279 @@
+\doxysection{Usuario Class Reference}
+\hypertarget{class_usuario}{}\label{class_usuario}\index{Usuario@{Usuario}}
+
+
+La clase \doxylink{class_usuario}{Usuario} maneja la información y la autenticación de un usuario en la aplicación.  
+
+
+
+
+{\ttfamily \#include $<$usuario.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_usuario_aa96ca8c30bdf93ec749f5879c16a2fb0}{Usuario}} (const QString \&nombre\+Usuario, const QString \&contrasena)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_usuario}{Usuario}. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_usuario_aee03e5581418d1ecf6b849a256db55f2}{get\+Nombre\+Usuario}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre del usuario. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_usuario_ae9101c610ed73e1b42deb8730df14278}{get\+Contrasena}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la contraseña del usuario. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_usuario_a38f21c18874430abb35f9278c5d328ab}{validar\+Contrasena}} (const QString \&contrasena) const
+\begin{DoxyCompactList}\small\item\em Valida la contraseña del usuario. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_usuario_ad2de019a4f7791f018574956be50a13c}{tiene\+Respuestas\+Guardadas}} () const
+\begin{DoxyCompactList}\small\item\em Verifica si el usuario tiene respuestas guardadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_ae4272c1dcb88383b19cf8d814191d74e}{agregar\+Respuesta}} (const QString \&respuesta)
+\begin{DoxyCompactList}\small\item\em Agrega una respuesta a la lista de respuestas del usuario. \end{DoxyCompactList}\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_usuario_a6632c0f7e3bc54bab327bbb2e16af8b9}{obtener\+Respuestas}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene las respuestas del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a75e270cb5f3989a0f620aabd702c4a20}{set\+Duracion\+Ciclo}} (int duracion)
+\begin{DoxyCompactList}\small\item\em Establece la duración del ciclo menstrual del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_af0fa74e2f011bde3542664b9f50551a2}{set\+Duracion\+Periodo}} (int duracion)
+\begin{DoxyCompactList}\small\item\em Establece la duración del período menstrual del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_afb1a1ba20e8a9c84fba0b1273f939fb6}{set\+Fecha\+Inicio\+Ultimo\+Periodo}} (const QDate \&fecha)
+\begin{DoxyCompactList}\small\item\em Establece la fecha de inicio del último período menstrual del usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_usuario_ae4aa00b32bb172cc8a95cba795350e9b}{get\+Duracion\+Ciclo}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la duración del ciclo menstrual del usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_usuario_ae216cf00969a574b8f34c8b73df4c450}{get\+Duracion\+Periodo}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la duración del período menstrual del usuario. \end{DoxyCompactList}\item 
+QDate \mbox{\hyperlink{class_usuario_a761b1ce02ef3fa19fd9bb95a3ce9a63d}{get\+Fecha\+Inicio\+Ultimo\+Periodo}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la fecha de inicio del último período menstrual del usuario. \end{DoxyCompactList}\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_usuario_ad4b9bd2e59cc42470916e2e6c48c6182}{cargar\+Respuestas\+Guardadas}} () const
+\begin{DoxyCompactList}\small\item\em Carga las respuestas guardadas del usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static QString \mbox{\hyperlink{class_usuario_ac61e1e4e19945e7a43cf5b6f2c40d659}{encriptar\+Contrasena}} (const QString \&contrasena)
+\begin{DoxyCompactList}\small\item\em Encripta la contraseña del usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La clase \doxylink{class_usuario}{Usuario} maneja la información y la autenticación de un usuario en la aplicación. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_usuario_aa96ca8c30bdf93ec749f5879c16a2fb0}\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Usuario()}{Usuario()}}
+{\footnotesize\ttfamily \label{class_usuario_aa96ca8c30bdf93ec749f5879c16a2fb0} 
+Usuario\+::\+Usuario (\begin{DoxyParamCaption}\item[{const QString \&}]{nombre\+Usuario}{, }\item[{const QString \&}]{contrasena}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_usuario}{Usuario}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+Usuario} & Nombre del usuario \\
+\hline
+{\em contrasena} & Contraseña del usuario \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_usuario_ae4272c1dcb88383b19cf8d814191d74e}\index{Usuario@{Usuario}!agregarRespuesta@{agregarRespuesta}}
+\index{agregarRespuesta@{agregarRespuesta}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{agregarRespuesta()}{agregarRespuesta()}}
+{\footnotesize\ttfamily \label{class_usuario_ae4272c1dcb88383b19cf8d814191d74e} 
+void Usuario\+::agregar\+Respuesta (\begin{DoxyParamCaption}\item[{const QString \&}]{respuesta}{}\end{DoxyParamCaption})}
+
+
+
+Agrega una respuesta a la lista de respuestas del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em respuesta} & Respuesta a agregar \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_usuario_ad4b9bd2e59cc42470916e2e6c48c6182}\index{Usuario@{Usuario}!cargarRespuestasGuardadas@{cargarRespuestasGuardadas}}
+\index{cargarRespuestasGuardadas@{cargarRespuestasGuardadas}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{cargarRespuestasGuardadas()}{cargarRespuestasGuardadas()}}
+{\footnotesize\ttfamily \label{class_usuario_ad4b9bd2e59cc42470916e2e6c48c6182} 
+QVector$<$ QString $>$ Usuario\+::cargar\+Respuestas\+Guardadas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Carga las respuestas guardadas del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Vector de respuestas guardadas 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_ac61e1e4e19945e7a43cf5b6f2c40d659}\index{Usuario@{Usuario}!encriptarContrasena@{encriptarContrasena}}
+\index{encriptarContrasena@{encriptarContrasena}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{encriptarContrasena()}{encriptarContrasena()}}
+{\footnotesize\ttfamily \label{class_usuario_ac61e1e4e19945e7a43cf5b6f2c40d659} 
+QString Usuario\+::encriptar\+Contrasena (\begin{DoxyParamCaption}\item[{const QString \&}]{contrasena}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Encripta la contraseña del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contrasena} & Contraseña a encriptar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Contraseña encriptada 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_ae9101c610ed73e1b42deb8730df14278}\index{Usuario@{Usuario}!getContrasena@{getContrasena}}
+\index{getContrasena@{getContrasena}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getContrasena()}{getContrasena()}}
+{\footnotesize\ttfamily \label{class_usuario_ae9101c610ed73e1b42deb8730df14278} 
+QString Usuario\+::get\+Contrasena (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene la contraseña del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Contraseña del usuario 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_ae4aa00b32bb172cc8a95cba795350e9b}\index{Usuario@{Usuario}!getDuracionCiclo@{getDuracionCiclo}}
+\index{getDuracionCiclo@{getDuracionCiclo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getDuracionCiclo()}{getDuracionCiclo()}}
+{\footnotesize\ttfamily \label{class_usuario_ae4aa00b32bb172cc8a95cba795350e9b} 
+int Usuario\+::get\+Duracion\+Ciclo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene la duración del ciclo menstrual del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Duración del ciclo en días 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_ae216cf00969a574b8f34c8b73df4c450}\index{Usuario@{Usuario}!getDuracionPeriodo@{getDuracionPeriodo}}
+\index{getDuracionPeriodo@{getDuracionPeriodo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getDuracionPeriodo()}{getDuracionPeriodo()}}
+{\footnotesize\ttfamily \label{class_usuario_ae216cf00969a574b8f34c8b73df4c450} 
+int Usuario\+::get\+Duracion\+Periodo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene la duración del período menstrual del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Duración del período en días 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_a761b1ce02ef3fa19fd9bb95a3ce9a63d}\index{Usuario@{Usuario}!getFechaInicioUltimoPeriodo@{getFechaInicioUltimoPeriodo}}
+\index{getFechaInicioUltimoPeriodo@{getFechaInicioUltimoPeriodo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getFechaInicioUltimoPeriodo()}{getFechaInicioUltimoPeriodo()}}
+{\footnotesize\ttfamily \label{class_usuario_a761b1ce02ef3fa19fd9bb95a3ce9a63d} 
+QDate Usuario\+::get\+Fecha\+Inicio\+Ultimo\+Periodo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene la fecha de inicio del último período menstrual del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Fecha de inicio del último período 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_aee03e5581418d1ecf6b849a256db55f2}\index{Usuario@{Usuario}!getNombreUsuario@{getNombreUsuario}}
+\index{getNombreUsuario@{getNombreUsuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getNombreUsuario()}{getNombreUsuario()}}
+{\footnotesize\ttfamily \label{class_usuario_aee03e5581418d1ecf6b849a256db55f2} 
+QString Usuario\+::get\+Nombre\+Usuario (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el nombre del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Nombre del usuario 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_a6632c0f7e3bc54bab327bbb2e16af8b9}\index{Usuario@{Usuario}!obtenerRespuestas@{obtenerRespuestas}}
+\index{obtenerRespuestas@{obtenerRespuestas}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{obtenerRespuestas()}{obtenerRespuestas()}}
+{\footnotesize\ttfamily \label{class_usuario_a6632c0f7e3bc54bab327bbb2e16af8b9} 
+QVector$<$ QString $>$ Usuario\+::obtener\+Respuestas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene las respuestas del usuario. 
+
+\begin{DoxyReturn}{Returns}
+Vector de respuestas del usuario 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_a75e270cb5f3989a0f620aabd702c4a20}\index{Usuario@{Usuario}!setDuracionCiclo@{setDuracionCiclo}}
+\index{setDuracionCiclo@{setDuracionCiclo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setDuracionCiclo()}{setDuracionCiclo()}}
+{\footnotesize\ttfamily \label{class_usuario_a75e270cb5f3989a0f620aabd702c4a20} 
+void Usuario\+::set\+Duracion\+Ciclo (\begin{DoxyParamCaption}\item[{int}]{duracion}{}\end{DoxyParamCaption})}
+
+
+
+Establece la duración del ciclo menstrual del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duracion} & Duración del ciclo en días \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_usuario_af0fa74e2f011bde3542664b9f50551a2}\index{Usuario@{Usuario}!setDuracionPeriodo@{setDuracionPeriodo}}
+\index{setDuracionPeriodo@{setDuracionPeriodo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setDuracionPeriodo()}{setDuracionPeriodo()}}
+{\footnotesize\ttfamily \label{class_usuario_af0fa74e2f011bde3542664b9f50551a2} 
+void Usuario\+::set\+Duracion\+Periodo (\begin{DoxyParamCaption}\item[{int}]{duracion}{}\end{DoxyParamCaption})}
+
+
+
+Establece la duración del período menstrual del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duracion} & Duración del período en días \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_usuario_afb1a1ba20e8a9c84fba0b1273f939fb6}\index{Usuario@{Usuario}!setFechaInicioUltimoPeriodo@{setFechaInicioUltimoPeriodo}}
+\index{setFechaInicioUltimoPeriodo@{setFechaInicioUltimoPeriodo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setFechaInicioUltimoPeriodo()}{setFechaInicioUltimoPeriodo()}}
+{\footnotesize\ttfamily \label{class_usuario_afb1a1ba20e8a9c84fba0b1273f939fb6} 
+void Usuario\+::set\+Fecha\+Inicio\+Ultimo\+Periodo (\begin{DoxyParamCaption}\item[{const QDate \&}]{fecha}{}\end{DoxyParamCaption})}
+
+
+
+Establece la fecha de inicio del último período menstrual del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fecha} & Fecha de inicio del último período \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_usuario_ad2de019a4f7791f018574956be50a13c}\index{Usuario@{Usuario}!tieneRespuestasGuardadas@{tieneRespuestasGuardadas}}
+\index{tieneRespuestasGuardadas@{tieneRespuestasGuardadas}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{tieneRespuestasGuardadas()}{tieneRespuestasGuardadas()}}
+{\footnotesize\ttfamily \label{class_usuario_ad2de019a4f7791f018574956be50a13c} 
+bool Usuario\+::tiene\+Respuestas\+Guardadas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifica si el usuario tiene respuestas guardadas. 
+
+\begin{DoxyReturn}{Returns}
+true si el usuario tiene respuestas guardadas, false en caso contrario 
+\end{DoxyReturn}
+\Hypertarget{class_usuario_a38f21c18874430abb35f9278c5d328ab}\index{Usuario@{Usuario}!validarContrasena@{validarContrasena}}
+\index{validarContrasena@{validarContrasena}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{validarContrasena()}{validarContrasena()}}
+{\footnotesize\ttfamily \label{class_usuario_a38f21c18874430abb35f9278c5d328ab} 
+bool Usuario\+::validar\+Contrasena (\begin{DoxyParamCaption}\item[{const QString \&}]{contrasena}{}\end{DoxyParamCaption}) const}
+
+
+
+Valida la contraseña del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contrasena} & Contraseña a validar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la contraseña es válida, false en caso contrario 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{usuario_8h}{usuario.\+h}}\item 
+\mbox{\hyperlink{usuario_8cpp}{usuario.\+cpp}}\end{DoxyCompactItemize}

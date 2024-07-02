@@ -1,0 +1,46 @@
+\doxysection{opciones\+\_\+extras.\+h}
+\hypertarget{opciones__extras_8h_source}{}\label{opciones__extras_8h_source}\mbox{\hyperlink{opciones__extras_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ OPCIONES\_EXTRAS\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ OPCIONES\_EXTRAS\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{info_8h}{info.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gestion__de__ciclo_8h}{gestion\_de\_ciclo.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resultado_8h}{resultado.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{usuario_8h}{usuario.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classopciones__extras}{opciones\_extras}};}
+\DoxyCodeLine{00021\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classopciones__extras}{opciones\_extras}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classopciones__extras_a46d8b38f4241377e4b9ce16a0db08933}{opciones\_extras}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_usuario}{Usuario}}\ *usuario\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classopciones__extras_adfc01dbebe2efd847476458abc2cf419}{\string~opciones\_extras}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_pushButton\_3\_clicked();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button\_info\_clicked();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button\_agregarDatos\_clicked();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button\_calendario\_clicked();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ Ui::opciones\_extras\ *ui;\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classinfo}{info}}\ *infoWindow;\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{classgestion__de__ciclo}{gestion\_de\_ciclo}}\ *gestionCicloWindow;\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_resultado}{Resultado}}\ *resultadoWindow;\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_usuario}{Usuario}}\ *usuario;\ }
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OPCIONES\_EXTRAS\_H}}
+
+\end{DoxyCode}

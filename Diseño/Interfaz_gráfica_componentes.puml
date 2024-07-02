@@ -1,0 +1,51 @@
+@startuml
+
+!include <tupadr3/common>
+!include <office/Servers/application_server>
+
+node "Medio de acceso" <<$cloudogu>>{
+OFF_APPLICATION_SERVER(app,App) #LightGoldenRodYellow
+title Flouwer: period tracker graphical user interface
+actor administrator as User #LightSeaGreen
+actor customer as User1 #LightSkyBlue
+}
+
+node "Entry System" <<$cloudogu>>{
+database dB as Database1 #LightSalmon
+collections main_screen as mainscreen #LightCyan
+collections login_screen as loginscreen #LightGreen
+collections signup_screen as signupscreen #LightGreen
+collections register_screen as registerscreen #LimeGreen
+entity disconnet_button as button1
+}
+
+node "Service system" <<$cloudogu>>{
+collections control_panel_display as controlpanel #LimeGreen
+collections gestion_ciclo_mestrual as gciclomestrual #LightGreen
+collections gestion_aprender as gaprender #LightGreen
+collections duracion_ciclo as dciclo #LightGreen
+collections duracion_periodo as dperiodo #LightGreen
+collections primer_dia as pdia #LightGreen
+database Flouwer_db as Database2 #Salmon
+}
+
+User --|> app #OrangeRed
+User1 --|> app #OrangeRed
+app --|> mainscreen #OrangeRed
+mainscreen --|> button1 #Orange
+mainscreen --|> registerscreen #Orange
+registerscreen --|> loginscreen #Orange
+registerscreen --|> signupscreen #Orange
+registerscreen --|> button1 #Orange
+mainscreen --|> controlpanel #OrangeRed
+controlpanel --|> gciclomestrual #OrangeRed
+gciclomestrual --|> dciclo #OrangeRed
+dciclo --|> dperiodo #OrangeRed
+dperiodo --|> pdia #OrangeRed
+controlpanel --|> gaprender #OrangeRed
+pdia --|> Database2 #OrangeRed
+gaprender --|> Database2 #OrangeRed
+loginscreen --|> Database1 #Orange 
+signupscreen --|> Database1 #Orange
+
+@enduml

@@ -1,0 +1,92 @@
+\doxysection{inicio Class Reference}
+\hypertarget{classinicio}{}\label{classinicio}\index{inicio@{inicio}}
+
+
+La clase inicio maneja el inicio de sesión y el registro de usuarios en la aplicación.  
+
+
+
+
+{\ttfamily \#include $<$inicio.\+h$>$}
+
+Inheritance diagram for inicio\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classinicio}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classinicio_a205a8ed7c52bc58251a611ebf452d61d}{login\+Successful}} (\mbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}usuario)
+\begin{DoxyCompactList}\small\item\em Señal emitida cuando el inicio de sesión es exitoso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classinicio_a88e1d3ef0994181ef70ef4363cd3d3f4}{inicio}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase inicio. \end{DoxyCompactList}\item 
+\Hypertarget{classinicio_a9653f2a2d90e952e19316761781759bb}\label{classinicio_a9653f2a2d90e952e19316761781759bb} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}inicio} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase inicio. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_usuario}{Usuario}} $>$ \mbox{\hyperlink{classinicio_aaa19d051b04ed5fc73237c550d14bf44}{get\+Usuarios}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de usuarios registrados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La clase inicio maneja el inicio de sesión y el registro de usuarios en la aplicación. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classinicio_a88e1d3ef0994181ef70ef4363cd3d3f4}\index{inicio@{inicio}!inicio@{inicio}}
+\index{inicio@{inicio}!inicio@{inicio}}
+\doxysubsubsection{\texorpdfstring{inicio()}{inicio()}}
+{\footnotesize\ttfamily \label{classinicio_a88e1d3ef0994181ef70ef4363cd3d3f4} 
+inicio\+::inicio (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor de la clase inicio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & El widget padre que contendrá a los otros widgets en esta ventana\\
+\hline
+{\em parent} & Puntero al widget padre \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classinicio_aaa19d051b04ed5fc73237c550d14bf44}\index{inicio@{inicio}!getUsuarios@{getUsuarios}}
+\index{getUsuarios@{getUsuarios}!inicio@{inicio}}
+\doxysubsubsection{\texorpdfstring{getUsuarios()}{getUsuarios()}}
+{\footnotesize\ttfamily \label{classinicio_aaa19d051b04ed5fc73237c550d14bf44} 
+QVector$<$ \mbox{\hyperlink{class_usuario}{Usuario}} $>$ inicio\+::get\+Usuarios (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene la lista de usuarios registrados. 
+
+\begin{DoxyReturn}{Returns}
+Vector de objetos \doxylink{class_usuario}{Usuario} 
+\end{DoxyReturn}
+\Hypertarget{classinicio_a205a8ed7c52bc58251a611ebf452d61d}\index{inicio@{inicio}!loginSuccessful@{loginSuccessful}}
+\index{loginSuccessful@{loginSuccessful}!inicio@{inicio}}
+\doxysubsubsection{\texorpdfstring{loginSuccessful}{loginSuccessful}}
+{\footnotesize\ttfamily \label{classinicio_a205a8ed7c52bc58251a611ebf452d61d} 
+void inicio\+::login\+Successful (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}}]{usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Señal emitida cuando el inicio de sesión es exitoso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario} & Puntero al objeto \doxylink{class_usuario}{Usuario} que ha iniciado sesión \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inicio_8h}{inicio.\+h}}\item 
+\mbox{\hyperlink{inicio_8cpp}{inicio.\+cpp}}\end{DoxyCompactItemize}

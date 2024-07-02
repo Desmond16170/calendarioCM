@@ -1,0 +1,34 @@
+@startuml
+actor Usuario #LightBlue
+title Flouwer: period tracker graphical user interface
+participant "Gestión de Ciclo" as Sistema #Green
+participant "Gestión de Aprendizaje" as GA #DarkSeaGreen
+database "Base de Datos Usuarios" as DBU #LightSalmon
+database "Base de Datos Flouwer" as DBF #OrangeRed
+
+
+Usuario -> Sistema : Registrarse
+Sistema -> DBU : Guardar información personal
+DBU --> Sistema : Confirmación
+
+Usuario -> Sistema : Iniciar sesión
+Sistema -> DBU : Verificar credenciales
+DBU --> DBF : Consultar información personal
+DBF --> DBU : Obtener información personal
+DBU --> Sistema : Confirmación
+
+Usuario -> Sistema : Ver ciclos del periodo
+Sistema -> DBF : Obtener datos del ciclo
+DBF --> Sistema : Datos del ciclo
+Sistema --> Usuario : Mostrar ciclos del periodo
+
+Usuario -> Sistema : Ver días de fertilidad
+Sistema -> DBF : Calcular días fértiles
+DBF --> Sistema : Días fértiles
+Sistema --> Usuario : Mostrar días fértiles
+
+Usuario -> GA : Gestión de aprendizaje
+GA -> DBF : Obtener información relevante
+DBF --> GA : Información del periodo
+GA --> Usuario : Mostrar información de aprendizaje
+@enduml
